@@ -1,6 +1,6 @@
 # 🧾 Smart Contract Audit Reports
 
-This repository contains a collection of smart contract audit reports conducted by [Your Name or Company].
+This repository contains a collection of smart contract audit reports conducted by @sg-milad .
 
 | #   | Project Name           | Audit Date | Report Link                                                                     | Notes                                             | Competitive Audits                                           |
 | --- | ---------------------- | ---------- | ------------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------ |

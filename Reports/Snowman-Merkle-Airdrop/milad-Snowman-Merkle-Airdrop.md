@@ -1,13 +1,9 @@
 # Snowman Merkle Airdrop - Findings Report
 
 # Table of contents
-- ## [Contest Summary](#contest-summary)
-- ## [Results Summary](#results-summary)
+
 - ## High Risk Findings
-    - ### [H-01. Unrestricted NFT Minting in Snowman Contract](#H-01)
-
-
-
+  - ### [H-01. Unrestricted NFT Minting in Snowman Contract](#H-01)
 
 # <a id='contest-summary'></a>Contest Summary
 
@@ -20,16 +16,14 @@
 # <a id='results-summary'></a>Results Summary
 
 ### Number of findings:
+
 - High: 1
 - Medium: 0
 - Low: 0
 
-
 # High Risk Findings
 
-## <a id='H-01'></a>H-01. Unrestricted NFT Minting in Snowman Contract            
-
-
+## <a id='H-01'></a>H-01. Unrestricted NFT Minting in Snowman Contract
 
 ## Description
 
@@ -51,9 +45,9 @@ function mintSnowman(address receiver, uint256 amount) external {
 
 **Likelihood**:
 
-* The vulnerable function is declared external, making it callable by any externally owned account or contract.
+- The vulnerable function is declared external, making it callable by any externally owned account or contract.
 
-* There is no access control modifier (onlyOwner, onlyAirdrop, etc.), so no checks prevent unauthorized callers.
+- There is no access control modifier (onlyOwner, onlyAirdrop, etc.), so no checks prevent unauthorized callers.
 
 **Impact**:
 
@@ -131,15 +125,8 @@ Restrict mintSnowman() so only the authorized SnowmanAirdrop contract (or anothe
 
 ```
 
-* Ensure that SnowmanAirdrop is deployed first (or its address is known) and passed into the Snowman constructor.
+- Ensure that SnowmanAirdrop is deployed first (or its address is known) and passed into the Snowman constructor.
 
-* In the SnowmanAirdrop contract, implement the staking checks and Merkle-based validation before calling mintSnowman().
+- In the SnowmanAirdrop contract, implement the staking checks and Merkle-based validation before calling mintSnowman().
 
-* Optionally, add further sanity checks (e.g., max amount per stake, event logging) as needed for governance or monitoring.
-
-    
-
-
-
-
-
+- Optionally, add further sanity checks (e.g., max amount per stake, event logging) as needed for governance or monitoring.
