@@ -2,10 +2,11 @@
 
 This repository contains a collection of smart contract audit reports conducted by @sg-milad .
 
-| #   | Project Name           | Audit Date | Report Link                                                                     | Notes                                             | Competitive Audits                                           |
-| --- | ---------------------- | ---------- | ------------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------ |
-| 1   | Thunder-Loan           |            | [View Report](./Reports/Thunder-Loan/audit.md)                                  | A flash loan protocol based on Aave and Compound. | https://codehawks.cyfrin.io/c/2023-11-Thunder-Loan           |
-| 2   | Snowman-Merkle-Airdrop |            | [View Report](./Reports/Snowman-Merkle-Airdrop/milad-Snowman-Merkle-Airdrop.md) | Airdrop Merkle-Airdrop                            | https://codehawks.cyfrin.io/c/2025-06-snowman-merkle-airdrop |
+| #   | Project Name           | Report Link                                                                     | Notes                                                   | Competitive Audits                                           | Severity |
+| --- | ---------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | -------- |
+| 1   | Thunder-Loan           | [View Report](./Reports/Thunder-Loan/audit.md)                                  | A flash loan protocol based on Aave and Compound.       | https://codehawks.cyfrin.io/c/2023-11-Thunder-Loan           | 🔴 High  |
+| 2   | Snowman-Merkle-Airdrop | [View Report](./Reports/Snowman-Merkle-Airdrop/milad-Snowman-Merkle-Airdrop.md) | Airdrop Merkle-Airdrop                                  | https://codehawks.cyfrin.io/c/2025-06-snowman-merkle-airdrop | 🔴 High  |
+| 3   | order book             | [View Report](./Reports/order-book/milad-OrderBook.md)                          | The OrderBook contract is a peer-to-peer trading system | https://codehawks.cyfrin.io/c/2025-07-orderbook              | 🟢 Low   |
 
 # my profile
 
