@@ -17,5 +17,5 @@ This repository contains a collection of smart contract audit reports conducted 
 ## 📬 Contact
 
 - **Auditor:** @sg-milad
-- **Email:** miladbachari14@gmail.com
+- **Email:** job@sg-milad.xyz
 - **Website:** [sg-milad.xyz](https://sg-milad.xyz/)
