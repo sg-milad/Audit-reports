@@ -1,13 +1,7 @@
 # OrderBook - Findings Report
 
-# Table of contents
-- ## [Contest Summary](#contest-summary)
-- ## [Results Summary](#results-summary)
-
-
 - ## Low Risk Findings
-    - ### [L-01. Integer Truncation in Fee Calculation Leads to Protocol Undercharging and Seller Overpayment](#L-01)
-
+  - ### [L-01. Integer Truncation in Fee Calculation Leads to Protocol Undercharging and Seller Overpayment](#L-01)
 
 # <a id='contest-summary'></a>Contest Summary
 
@@ -20,30 +14,24 @@
 # <a id='results-summary'></a>Results Summary
 
 ### Number of findings:
+
 - High: 0
 - Medium: 0
 - Low: 1
 
-
-
-    
-
-
 # Low Risk Findings
 
-## <a id='L-01'></a>L-01. Integer Truncation in Fee Calculation Leads to Protocol Undercharging and Seller Overpayment            
-
-
+## <a id='L-01'></a>L-01. Integer Truncation in Fee Calculation Leads to Protocol Undercharging and Seller Overpayment
 
 ## Description
 
 The fee calculation uses integer division which truncates fractional values. For prices not divisible by 100, this results in:
 
-* Protocol receiving less than the intended 3% fee
+- Protocol receiving less than the intended 3% fee
 
-* Seller receiving marginally more than intended
+- Seller receiving marginally more than intended
 
-* Small value leakage that compounds over many transactions
+- Small value leakage that compounds over many transactions
 
 ```Solidity
 function buyOrder(uint256 _orderId) public {
@@ -58,21 +46,21 @@ function buyOrder(uint256 _orderId) public {
 
 **Likelihood**: High
 
-* Occurs in every transaction where price % 100 ≠ 0
+- Occurs in every transaction where price % 100 ≠ 0
 
-* Affects 99% of possible price points
+- Affects 99% of possible price points
 
-* Magnified with high transaction volume
+- Magnified with high transaction volume
 
 **Impact**: Medium
 
-* Protocol loses expected revenue from fees
+- Protocol loses expected revenue from fees
 
-* Sellers receive unintended windfall gains
+- Sellers receive unintended windfall gains
 
-* Fee inaccuracy violates protocol specifications
+- Fee inaccuracy violates protocol specifications
 
-* Value leakage compounds significantly over time
+- Value leakage compounds significantly over time
 
 ## Proof of Concept
 
@@ -119,6 +107,3 @@ function buyOrder(uint256 _orderId) public {
     // ...
 }
 ```
-
-
-
